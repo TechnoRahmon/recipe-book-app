@@ -1,1 +1,28 @@
-<app-recipe-item></app-recipe-item>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success"> New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row my-3" *ngFor="let recipe of recipes">
+    <div class="col-xs-12">     
+        <div  class="card clearfix mx-md-0 mx-auto">
+            <div class="row g-0">
+                <div class="col-md-8 p-2">
+                    <div class="card-body p-0">
+                        <h5 class="card-title fs-5">
+                            {{recipe.name}}
+                        </h5>
+                        <p class="card-text d-inline-block text-truncate" style="max-width: 100%;">
+                            <span data-bs-toggle="tooltip" data-bs-title="recipe.description">{{recipe.description}}</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-center p-1">
+                  <img src="{{recipe.imagePath}}" class="img-fluid rounded" alt="{{recipe.name}}">
+                </div>
+              </div>
+          </div>
+        <!-- <app-recipe-item></app-recipe-item> -->
+    </div>
+</div>
